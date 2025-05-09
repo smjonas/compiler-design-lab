@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
         if (args.length != 2) {
             System.err.println("Invalid arguments: Expected one input file and one output file");
@@ -42,8 +43,9 @@ public class Main {
         }
 
         // TODO: generate assembly and invoke gcc instead of generating abstract assembly
-        String s = new CodeGenerator().generateCode(graphs);
-        Files.writeString(output, s);
+
+        // String s = new CodeGenerator().generateCode(graphs);
+        //Files.writeString(output, s);
     }
 
     private static ProgramTree lexAndParse(Path input) throws IOException {
